@@ -3,7 +3,7 @@ titre: Abonnement floral
 prix: À partir de 22 €/sem
 ordre: 6
 visible: false
-image: /images/abonnement.jpg
+image: /images/uploads/deuxcoings.png
 description: Recevez un bouquet frais chaque semaine, à la maison ou au bureau.
   Formules hebdomadaires ou mensuelles.
 intro: >

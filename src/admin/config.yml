@@ -1,0 +1,64 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images/uploads"
+public_folder: "/images/uploads"
+
+locale: fr
+
+collections:
+  # --- CATÉGORIES : ajouter / modifier / supprimer + visible + galerie ---
+  - name: "categories"
+    label: "Catégories de créations"
+    label_singular: "Catégorie"
+    folder: "src/categories"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    summary: "{{titre}} — {{prix}}{{#if visible}}{{else}}  (masquée){{/if}}"
+    sortable_fields: ['ordre', 'titre']
+    fields:
+      - { name: "titre", label: "Nom de la catégorie", widget: "string" }
+      - { name: "prix", label: "Prix affiché", widget: "string", hint: "Ex : À partir de 25 € ou Sur devis" }
+      - { name: "ordre", label: "Ordre d'affichage", widget: "number", default: 1, value_type: "int", hint: "1 = affiché en premier" }
+      - { name: "visible", label: "Afficher cette catégorie sur le site", widget: "boolean", default: true, hint: "Décochez pour masquer (ex : Saint-Valentin hors saison). La catégorie reste enregistrée." }
+      - { name: "image", label: "Photo principale (vignette accueil)", widget: "image" }
+      - { name: "description", label: "Phrase courte (sous la vignette)", widget: "text" }
+      - { name: "intro", label: "Texte d'introduction (haut de la page)", widget: "text", required: false }
+      - name: "galerie"
+        label: "Galerie de photos"
+        label_singular: "Photo"
+        widget: "list"
+        required: false
+        summary: "{{fields.legende}}"
+        fields:
+          - { name: "image", label: "Photo", widget: "image" }
+          - { name: "legende", label: "Légende (au survol)", widget: "string", required: false }
+
+  # --- PARAMÈTRES DU SITE ---
+  - name: "parametres"
+    label: "Paramètres du site"
+    files:
+      - name: "contact"
+        label: "Coordonnées & réglages"
+        file: "src/_data/site.json"
+        fields:
+          - { name: "adresse", label: "Adresse", widget: "string" }
+          - { name: "telephone", label: "Téléphone", widget: "string" }
+          - { name: "email", label: "Email", widget: "string" }
+          - { name: "horaires", label: "Horaires", widget: "string" }
+          - { name: "instagram", label: "Lien Instagram", widget: "string", hint: "Adresse complète https://www.instagram.com/votrecompte" }
+          - { name: "livraison", label: "Bandeau livraison (en haut du site)", widget: "string", hint: "Ex : Livraison gratuite sur Bédoin" }
+          - { name: "bouquet_semaine_visible", label: "Afficher l'encart Bouquet de la semaine", widget: "boolean", default: true }
+          - { name: "bouquet_semaine_titre", label: "Bouquet de la semaine — Titre de l'encart", widget: "string", default: "Le bouquet de la semaine" }
+          - { name: "bouquet_semaine_nom", label: "Bouquet de la semaine — Nom du bouquet", widget: "string" }
+          - { name: "bouquet_semaine_prix", label: "Bouquet de la semaine — Prix", widget: "string" }
+          - { name: "bouquet_semaine_desc", label: "Bouquet de la semaine — Description", widget: "text" }
+          - { name: "bouquet_semaine_image", label: "Bouquet de la semaine — Photo", widget: "image" }
+          - { name: "cours_visible", label: "Afficher l'encart Cours d'art floral", widget: "boolean", default: true }
+          - { name: "cours_accroche", label: "Cours — Titre accrocheur", widget: "string" }
+          - { name: "cours_desc", label: "Cours — Description", widget: "text" }
+          - { name: "cours_prix", label: "Cours — Prix", widget: "string" }
+          - { name: "cours_image", label: "Cours — Photo", widget: "image" }
+          - { name: "cours_bouton", label: "Cours — Texte du bouton", widget: "string", default: "Réserver un atelier" }

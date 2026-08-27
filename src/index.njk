@@ -1,0 +1,219 @@
+---
+layout: base.njk
+title: La Canopée Fleurie — Artisan Floral
+description: La Canopée Fleurie, artisan floral en Vaucluse. Compositions pour mariage, deuil, événements et bouquets de saison. Fleurs de saison, savoir-faire artisanal.
+---
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="accueil">
+  <div class="wrap hero-inner">
+    <div class="hero-text reveal">
+      <p class="hero-eyebrow">Artisan floral · Fleurs de saison</p>
+      <h1>L'art floral,
+        <span class="accent">au naturel</span>
+      </h1>
+      <p class="lead">Chaque composition raconte une histoire. Bouquets de saison, mariages, hommages et créations sur-mesure, imaginés avec des fleurs choisies à la main.</p>
+      <div class="hero-actions">
+        <a href="#collections" class="btn btn-primary">Découvrir les créations</a>
+        <a href="#contact" class="btn btn-ghost">Demander un devis</a>
+      </div>
+      {% if site.livraison %}
+      <div class="hero-delivery">
+        <span class="dot"></span>{{ site.livraison }}
+      </div>
+      {% endif %}
+    </div>
+    <div class="hero-visual reveal">
+      <img src="/images/hero.jpg" alt="Composition florale artisanale La Canopée Fleurie" onerror="this.src='https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=800&q=80'">
+      <span class="hero-badge">Fleurs fraîches, cueillies avec soin</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BOUQUET DE LA SEMAINE ===================== -->
+{% if site.bouquet_semaine_visible %}
+<section class="block bouquet-semaine">
+  <div class="wrap">
+    <div class="bs-inner reveal">
+      <span class="bs-badge">Nouveau chaque semaine</span>
+      <div class="bs-img">
+        <img src="{{ site.bouquet_semaine_image }}" alt="{{ site.bouquet_semaine_nom }}" onerror="this.src='https://images.unsplash.com/photo-1487070183336-b863922373d4?w=700&q=80'">
+      </div>
+      <div class="bs-body">
+        <span class="eyebrow">{{ site.bouquet_semaine_titre }}</span>
+        <h2>{{ site.bouquet_semaine_nom }}</h2>
+        <div class="bs-price">{{ site.bouquet_semaine_prix }}</div>
+        <p>{{ site.bouquet_semaine_desc }}</p>
+        <a href="#contact" class="btn btn-primary">Le commander</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ===================== COLLECTIONS ===================== -->
+<section class="block cats" id="collections">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Nos créations</span>
+      <h2>Une fleur pour <em>chaque moment</em></h2>
+      <p>Cliquez sur une création pour découvrir nos réalisations en photos.</p>
+    </div>
+    <div class="cat-grid">
+      {% for cat in collections.categorie | sort(false, false, 'data.ordre') %}
+      {% if cat.data.visible %}
+      <a class="cat" href="/{{ cat.data.slug }}/">
+        <img src="{{ cat.data.image }}" alt="{{ cat.data.titre }}" onerror="this.src='https://images.unsplash.com/photo-1487070183336-b863922373d4?w=700&q=80'">
+        <div class="cat-overlay">
+          <span class="plus">+</span>
+          <h3>{{ cat.data.titre }}</h3>
+          <span class="price">{{ cat.data.prix }}</span>
+        </div>
+      </a>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== A PROPOS ===================== -->
+<section class="block about" id="apropos">
+  <div class="wrap about-inner">
+    <div class="about-img reveal">
+      <img src="/images/atelier.jpg" alt="L'atelier de La Canopée Fleurie" onerror="this.src='https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800&q=80'">
+    </div>
+    <div class="about-text reveal">
+      <h2>Un atelier, <em>une passion</em></h2>
+      <p>La Canopée Fleurie, c'est avant tout une histoire de sensibilité et de matière vivante. Nous travaillons des fleurs de saison, privilégiant les producteurs locaux et une approche respectueuse du végétal.</p>
+      <p>De la première tige au ruban final, chaque bouquet est composé à la main, dans le souci du détail et de l'émotion qu'il transmettra.</p>
+      <p class="signature">La Canopée Fleurie</p>
+      <div class="about-stats">
+        <div class="stat"><b>100%</b><span>Fleurs de saison</span></div>
+        <div class="stat"><b>Local</b><span>Producteurs choisis</span></div>
+        <div class="stat"><b>Sur-mesure</b><span>Chaque création</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VALEURS ===================== -->
+<section class="block values" id="valeurs">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Notre savoir-faire</span>
+      <h2>Le geste artisanal</h2>
+    </div>
+    <div class="val-grid">
+      <div class="val reveal">
+        <div class="icon">🌿</div>
+        <h4>Fleurs de saison</h4>
+        <p>Des végétaux choisis au fil des saisons, pour des compositions toujours fraîches et justes.</p>
+      </div>
+      <div class="val reveal">
+        <div class="icon">✂️</div>
+        <h4>Fait main</h4>
+        <p>Chaque bouquet est monté à la main, pièce unique pensée pour l'occasion qu'il célèbre.</p>
+      </div>
+      <div class="val reveal">
+        <div class="icon">💐</div>
+        <h4>Sur-mesure</h4>
+        <p>Mariage, deuil, événement : nous créons selon vos envies, vos couleurs et votre budget.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COURS D'ART FLORAL (encart) ===================== -->
+{% if site.cours_visible %}
+<section class="block cours" id="cours">
+  <div class="wrap cours-inner reveal">
+    <div class="cours-body">
+      <span class="cours-tag">Ateliers au magasin</span>
+      <h2>{{ site.cours_accroche }}</h2>
+      <p>{{ site.cours_desc }}</p>
+      <div class="cours-meta">
+        <span class="cours-price">{{ site.cours_prix }}</span>
+        <a href="#contact" class="btn btn-primary">{{ site.cours_bouton }}</a>
+      </div>
+    </div>
+    <div class="cours-visual">
+      <img src="{{ site.cours_image }}" alt="{{ site.cours_titre }}" onerror="this.src='https://images.unsplash.com/photo-1470509037663-253afd7f0f51?w=800&q=80'">
+      <span class="cours-float">🌸 Tout le matériel fourni</span>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ===================== AVIS ===================== -->
+<section class="block avis" id="avis">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Témoignages</span>
+      <h2>Ce que disent <em style="font-family:var(--script);font-style:normal;color:var(--vieux-rose)">nos clients</em></h2>
+    </div>
+    <div class="avis-grid">
+      <div class="avis-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="avis-txt">"Un bouquet de mariée absolument sublime, exactement dans les tons que je voulais. Un travail plein de sensibilité."</p>
+        <div class="avis-author"><div class="avis-avatar">C</div><div><div class="name">Camille R.</div><div class="meta">Mariage · Avis Google</div></div></div>
+      </div>
+      <div class="avis-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="avis-txt">"Dans un moment difficile, leur délicatesse a fait toute la différence. Une composition pleine de douceur."</p>
+        <div class="avis-author"><div class="avis-avatar">M</div><div><div class="name">Michel D.</div><div class="meta">Deuil · Avis Google</div></div></div>
+      </div>
+      <div class="avis-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="avis-txt">"Mon abonnement floral illumine la maison chaque semaine. Toujours frais, toujours original. Un bonheur !"</p>
+        <div class="avis-author"><div class="avis-avatar">S</div><div><div class="name">Sophie L.</div><div class="meta">Abonnement · Avis Google</div></div></div>
+      </div>
+    </div>
+    <div class="avis-cta reveal">
+      <a class="avis-google" href="#" target="_blank" rel="noopener">
+        <span class="g-badge"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        ★ 5,0 — Voir tous nos avis sur Google
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="block contact" id="contact">
+  <div class="wrap contact-inner">
+    <div class="contact-info reveal">
+      <h2>Parlons de votre <em>projet floral</em></h2>
+      <p style="color:var(--vert-jardin);margin-bottom:30px">Un mariage à fleurir, un hommage à composer, ou simplement l'envie d'un beau bouquet ? Écrivez-nous.</p>
+      <div class="info-line"><div class="ic">📍</div><div><b>Adresse</b>{{ site.adresse }}</div></div>
+      <div class="info-line"><div class="ic">📞</div><div><b>Téléphone</b>{{ site.telephone }}</div></div>
+      <div class="info-line"><div class="ic">✉️</div><div><b>Email</b>{{ site.email }}</div></div>
+      <div class="info-line"><div class="ic">🕐</div><div><b>Horaires</b>{{ site.horaires }}</div></div>
+    </div>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/merci/">
+      <input type="hidden" name="form-name" value="contact">
+      <p style="display:none"><label>Ne pas remplir : <input name="bot-field"></label></p>
+      <div class="field">
+        <label for="nom">Votre nom</label>
+        <input type="text" id="nom" name="nom" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="field">
+        <label for="sujet">Type de demande</label>
+        <select id="sujet" name="sujet">
+          <option>Bouquet du jour</option>
+          <option>Mariage</option>
+          <option>Deuil</option>
+          <option>Événement</option>
+          <option>Autre / sur-mesure</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Votre message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%">Envoyer ma demande</button>
+    </form>
+  </div>
+</section>

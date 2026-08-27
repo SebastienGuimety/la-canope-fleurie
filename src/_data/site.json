@@ -1,0 +1,21 @@
+{
+  "adresse": "À compléter — Bédoin, Vaucluse",
+  "telephone": "À compléter",
+  "email": "contact@lacanopeefleurie.fr",
+  "horaires": "Mardi – Samedi · 9h – 19h",
+  "instagram": "https://www.instagram.com/",
+  "livraison": "Livraison gratuite sur Bédoin",
+  "bouquet_semaine_titre": "Le bouquet de la semaine",
+  "bouquet_semaine_nom": "Douceur printanière",
+  "bouquet_semaine_prix": "28 €",
+  "bouquet_semaine_desc": "Un mélange délicat de renoncules, tulipes et feuillages de saison, composé ce lundi. Disponible en quantité limitée.",
+  "bouquet_semaine_image": "/images/bouquet-semaine.jpg",
+  "bouquet_semaine_visible": true,
+  "cours_visible": true,
+  "cours_titre": "Cours d'art floral",
+  "cours_accroche": "Et si vous mettiez les mains dans les fleurs ?",
+  "cours_desc": "Rejoignez nos ateliers d'art floral au magasin, en petit groupe et dans la bonne humeur. Débutant ou passionné, repartez avec votre propre création et de nouvelles techniques. Tout le matériel et les fleurs sont fournis.",
+  "cours_prix": "À partir de 45 € / atelier",
+  "cours_image": "/images/cours.jpg",
+  "cours_bouton": "Réserver un atelier"
+}

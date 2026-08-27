@@ -1,0 +1,5 @@
+{
+  "tags": "categorie",
+  "permalink": false,
+  "eleventyComputed": { "slug": "{{ page.fileSlug }}" }
+}

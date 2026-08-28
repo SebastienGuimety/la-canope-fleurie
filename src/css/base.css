@@ -59,7 +59,7 @@ header{
 }
 .menu .cta:hover{background:var(--vert-jardin);color:var(--rose-pale)}
 .menu .cta::after{display:none}
-.burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+.burger{display:none;position:relative;z-index:110;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
 .burger span{width:26px;height:2px;background:var(--vert-empire);transition:.3s}
 
 /* ---------- HERO ---------- */
@@ -223,6 +223,7 @@ footer .brand small{color:var(--vert-pistache)}
     position:fixed;top:0;right:-100%;width:75%;max-width:320px;height:100vh;
     background:var(--rose-pale);flex-direction:column;justify-content:center;gap:28px;
     transition:right .35s;box-shadow:-10px 0 40px rgba(0,0,0,.15);
+    z-index:105;
   }
   .menu.open{right:0}
   .burger{display:flex}

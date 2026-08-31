@@ -144,6 +144,27 @@ description: La Canopée Fleurie, artisan floral en Vaucluse. Compositions pour 
 </section>
 {% endif %}
 
+<!-- ===================== ABONNEMENT PROFESSIONNELS (encart) ===================== -->
+{% if site.pro_visible %}
+<section class="block pro" id="pro">
+  <div class="wrap pro-inner reveal">
+    <div class="pro-visual">
+      <img src="{{ site.pro_image }}" alt="{{ site.pro_titre }}" onerror="this.src='https://images.unsplash.com/photo-1487070183336-b863922373d4?w=800&q=80'">
+      <span class="pro-float">🌿 Renouvelé chaque semaine</span>
+    </div>
+    <div class="pro-body">
+      <span class="pro-tag">{{ site.pro_tag }}</span>
+      <h2>{{ site.pro_titre }}</h2>
+      <p>{{ site.pro_desc }}</p>
+      <div class="pro-meta">
+        <span class="pro-price">{{ site.pro_prix }}</span>
+        <a href="#contact" class="btn btn-primary">{{ site.pro_bouton }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <!-- ===================== AVIS ===================== -->
 <section class="block avis" id="avis">
   <div class="wrap">
@@ -206,6 +227,7 @@ description: La Canopée Fleurie, artisan floral en Vaucluse. Compositions pour 
           <option>Mariage</option>
           <option>Deuil</option>
           <option>Événement</option>
+          <option>Abonnement professionnel (restaurant, hôtel...)</option>
           <option>Autre / sur-mesure</option>
         </select>
       </div>

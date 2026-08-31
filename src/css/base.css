@@ -350,3 +350,22 @@ footer .foot-brand-logo img{width:64px;height:64px;border-radius:50%;object-fit:
   .cours-visual{max-width:420px;margin:0 auto;order:-1}
   .cours-float{left:10px}
 }
+
+/* ========== ENCART ABONNEMENT PROFESSIONNELS ========== */
+.pro{padding:0 0 90px}
+.pro-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;background:var(--creme);border-radius:28px;padding:56px 52px;position:relative;overflow:hidden}
+.pro-inner::before{content:"";position:absolute;bottom:-60px;left:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(163,175,125,.28),transparent 70%)}
+.pro-visual{position:relative;order:-1}
+.pro-visual>img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:20px;box-shadow:0 24px 54px rgba(69,84,56,.2)}
+.pro-float{position:absolute;bottom:20px;right:-18px;background:var(--rose-pale);padding:12px 20px;border-radius:14px;box-shadow:0 14px 30px rgba(69,84,56,.18);font-family:var(--serif);font-style:italic;color:var(--vert-empire);font-size:.98rem;z-index:3}
+.pro-body{position:relative;z-index:2}
+.pro-tag{display:inline-block;background:var(--vert-empire);color:var(--creme);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:7px 16px;border-radius:30px;margin-bottom:18px}
+.pro-body h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,3.6vw,2.7rem);color:var(--vert-empire);line-height:1.12;margin-bottom:18px}
+.pro-body p{color:var(--vert-jardin);margin-bottom:28px;max-width:440px}
+.pro-meta{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.pro-price{font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--copper)}
+@media(max-width:820px){
+  .pro-inner{grid-template-columns:1fr;gap:38px;padding:40px 28px}
+  .pro-visual{max-width:420px;margin:0 auto;order:-1}
+  .pro-float{right:10px}
+}

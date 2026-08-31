@@ -63,3 +63,10 @@ collections:
           - { name: "cours_prix", label: "Cours — Prix", widget: "string" }
           - { name: "cours_image", label: "Cours — Photo", widget: "image" }
           - { name: "cours_bouton", label: "Cours — Texte du bouton", widget: "string", default: "Réserver un atelier" }
+          - { name: "pro_visible", label: "Afficher l'encart Abonnement professionnel", widget: "boolean", default: true }
+          - { name: "pro_tag", label: "Pro — Étiquette", widget: "string", hint: "Ex : Restaurants · Hôtels · Commerces" }
+          - { name: "pro_titre", label: "Pro — Titre accrocheur", widget: "string" }
+          - { name: "pro_desc", label: "Pro — Description", widget: "text" }
+          - { name: "pro_prix", label: "Pro — Prix", widget: "string" }
+          - { name: "pro_image", label: "Pro — Photo", widget: "image" }
+          - { name: "pro_bouton", label: "Pro — Texte du bouton", widget: "string", default: "Demander un devis pro" }

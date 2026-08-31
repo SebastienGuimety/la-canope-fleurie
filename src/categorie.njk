@@ -12,14 +12,14 @@ eleventyComputed:
 
 <section class="cat-hero">
   <div class="wrap inner">
-    <a href="/#collections" class="back">← Toutes les créations</a>
-    <p class="eyebrow">Nos créations</p>
+    <a href="/#collections" class="back" data-en="← All creations">← Toutes les créations</a>
+    <p class="eyebrow" data-en="Our creations">Nos créations</p>
     <h1>{{ cat.data.titre }}</h1>
     <div class="price">{{ cat.data.prix }}</div>
     {% if cat.data.intro %}<p class="cat-intro">{{ cat.data.intro }}</p>{% endif %}
     <div class="cat-hero-actions">
-      <a href="/#contact" class="btn btn-primary">Demander un devis</a>
-      <a href="/#collections" class="btn btn-ghost">Voir les autres créations</a>
+      <a href="/#contact" class="btn btn-primary" data-en="Request a quote">Demander un devis</a>
+      <a href="/#collections" class="btn btn-ghost" data-en="See other creations">Voir les autres créations</a>
     </div>
   </div>
 </section>
@@ -35,7 +35,7 @@ eleventyComputed:
         </div>
         {% endfor %}
       {% else %}
-        <p style="color:var(--vert-jardin)">Les photos de cette catégorie arrivent bientôt.</p>
+        <p style="color:var(--vert-jardin)" data-en="Photos for this category are coming soon.">Les photos de cette catégorie arrivent bientôt.</p>
       {% endif %}
     </div>
   </div>
@@ -43,9 +43,9 @@ eleventyComputed:
 
 <section class="cat-cta">
   <div class="wrap">
-    <h2>Envie d'une création <em>{{ cat.data.titre | lower }}</em> ?</h2>
-    <p>Contactez-nous pour composer ensemble une création qui vous ressemble.</p>
-    <a href="/#contact" class="btn btn-primary">Prendre contact</a>
+    <h2 data-en-html="Looking for a <em>{{ cat.data.titre | lower }}</em> creation?">Envie d'une création <em>{{ cat.data.titre | lower }}</em> ?</h2>
+    <p data-en="Contact us to design together a creation that reflects you.">Contactez-nous pour composer ensemble une création qui vous ressemble.</p>
+    <a href="/#contact" class="btn btn-primary" data-en="Get in touch">Prendre contact</a>
   </div>
 </section>
 

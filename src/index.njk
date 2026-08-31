@@ -8,14 +8,14 @@ description: La Canopée Fleurie, artisan floral en Vaucluse. Compositions pour 
 <section class="hero" id="accueil">
   <div class="wrap hero-inner">
     <div class="hero-text reveal">
-      <p class="hero-eyebrow">Artisan floral · Fleurs de saison</p>
-      <h1>L'art floral,
+      <p class="hero-eyebrow" data-en="Floral artisan · Seasonal flowers">Artisan floral · Fleurs de saison</p>
+      <h1 data-en-html='The art of flowers, <span class="accent">naturally</span>'>L'art floral,
         <span class="accent">au naturel</span>
       </h1>
-      <p class="lead">Chaque composition raconte une histoire. Bouquets de saison, mariages, hommages et créations sur-mesure, imaginés avec des fleurs choisies à la main.</p>
+      <p class="lead" data-en="Every composition tells a story. Seasonal bouquets, weddings, tributes and bespoke creations, crafted with hand-picked flowers.">Chaque composition raconte une histoire. Bouquets de saison, mariages, hommages et créations sur-mesure, imaginés avec des fleurs choisies à la main.</p>
       <div class="hero-actions">
-        <a href="#collections" class="btn btn-primary">Découvrir les créations</a>
-        <a href="#contact" class="btn btn-ghost">Demander un devis</a>
+        <a href="#collections" class="btn btn-primary" data-en="Discover our creations">Découvrir les créations</a>
+        <a href="#contact" class="btn btn-ghost" data-en="Request a quote">Demander un devis</a>
       </div>
       {% if site.livraison %}
       <div class="hero-delivery">
@@ -25,7 +25,7 @@ description: La Canopée Fleurie, artisan floral en Vaucluse. Compositions pour 
     </div>
     <div class="hero-visual reveal">
       <img src="{{ site.hero_image }}" alt="Composition florale artisanale La Canopée Fleurie" onerror="this.src='https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=800&q=80'">
-      <span class="hero-badge">Fleurs fraîches, cueillies avec soin</span>
+      <span class="hero-badge" data-en="Fresh flowers, carefully hand-picked">Fleurs fraîches, cueillies avec soin</span>
     </div>
   </div>
 </section>
@@ -35,7 +35,7 @@ description: La Canopée Fleurie, artisan floral en Vaucluse. Compositions pour 
 <section class="block bouquet-semaine">
   <div class="wrap">
     <div class="bs-inner reveal">
-      <span class="bs-badge">Nouveau chaque semaine</span>
+      <span class="bs-badge" data-en="New every week">Nouveau chaque semaine</span>
       <div class="bs-img">
         <img src="{{ site.bouquet_semaine_image }}" alt="{{ site.bouquet_semaine_nom }}" onerror="this.src='https://images.unsplash.com/photo-1487070183336-b863922373d4?w=700&q=80'">
       </div>
@@ -44,7 +44,7 @@ description: La Canopée Fleurie, artisan floral en Vaucluse. Compositions pour 
         <h2>{{ site.bouquet_semaine_nom }}</h2>
         <div class="bs-price">{{ site.bouquet_semaine_prix }}</div>
         <p>{{ site.bouquet_semaine_desc }}</p>
-        <a href="#contact" class="btn btn-primary">Le commander</a>
+        <a href="#contact" class="btn btn-primary" data-en="Order it">Le commander</a>
       </div>
     </div>
   </div>
@@ -55,9 +55,9 @@ description: La Canopée Fleurie, artisan floral en Vaucluse. Compositions pour 
 <section class="block cats" id="collections">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-eyebrow">Nos créations</span>
-      <h2>Une fleur pour <em>chaque moment</em></h2>
-      <p>Cliquez sur une création pour découvrir nos réalisations en photos.</p>
+      <span class="section-eyebrow" data-en="Our creations">Nos créations</span>
+      <h2 data-en-html="A flower for <em>every moment</em>">Une fleur pour <em>chaque moment</em></h2>
+      <p data-en="Click on a creation to see our work in photos.">Cliquez sur une création pour découvrir nos réalisations en photos.</p>
     </div>
     <div class="cat-grid">
       {% for cat in collections.categorie | sort(false, false, 'data.ordre') %}
@@ -83,14 +83,14 @@ description: La Canopée Fleurie, artisan floral en Vaucluse. Compositions pour 
       <img src="/images/atelier.jpg" alt="L'atelier de La Canopée Fleurie" onerror="this.src='https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800&q=80'">
     </div>
     <div class="about-text reveal">
-      <h2>Un atelier, <em>une passion</em></h2>
-      <p>La Canopée Fleurie, c'est avant tout une histoire de sensibilité et de matière vivante. Nous travaillons des fleurs de saison, privilégiant les producteurs locaux et une approche respectueuse du végétal.</p>
-      <p>De la première tige au ruban final, chaque bouquet est composé à la main, dans le souci du détail et de l'émotion qu'il transmettra.</p>
+      <h2 data-en-html="A workshop, <em>a passion</em>">Un atelier, <em>une passion</em></h2>
+      <p data-en="La Canopée Fleurie is, above all, a story of sensitivity and living material. We work with seasonal flowers, favouring local producers and a respectful approach to plants.">La Canopée Fleurie, c'est avant tout une histoire de sensibilité et de matière vivante. Nous travaillons des fleurs de saison, privilégiant les producteurs locaux et une approche respectueuse du végétal.</p>
+      <p data-en="From the very first stem to the final ribbon, every bouquet is composed by hand, with care for detail and the emotion it will convey.">De la première tige au ruban final, chaque bouquet est composé à la main, dans le souci du détail et de l'émotion qu'il transmettra.</p>
       <p class="signature">La Canopée Fleurie</p>
       <div class="about-stats">
-        <div class="stat"><b>100%</b><span>Fleurs de saison</span></div>
-        <div class="stat"><b>Local</b><span>Producteurs choisis</span></div>
-        <div class="stat"><b>Sur-mesure</b><span>Chaque création</span></div>
+        <div class="stat"><b>100%</b><span data-en="Seasonal flowers">Fleurs de saison</span></div>
+        <div class="stat"><b data-en="Local">Local</b><span data-en="Chosen producers">Producteurs choisis</span></div>
+        <div class="stat"><b data-en="Bespoke">Sur-mesure</b><span data-en="Every creation">Chaque création</span></div>
       </div>
     </div>
   </div>
@@ -100,24 +100,24 @@ description: La Canopée Fleurie, artisan floral en Vaucluse. Compositions pour 
 <section class="block values" id="valeurs">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-eyebrow">Notre savoir-faire</span>
-      <h2>Le geste artisanal</h2>
+      <span class="section-eyebrow" data-en="Our craftsmanship">Notre savoir-faire</span>
+      <h2 data-en="The artisan's touch">Le geste artisanal</h2>
     </div>
     <div class="val-grid">
       <div class="val reveal">
         <div class="icon">🌿</div>
-        <h4>Fleurs de saison</h4>
-        <p>Des végétaux choisis au fil des saisons, pour des compositions toujours fraîches et justes.</p>
+        <h4 data-en="Seasonal flowers">Fleurs de saison</h4>
+        <p data-en="Plants chosen through the seasons, for compositions that are always fresh and true.">Des végétaux choisis au fil des saisons, pour des compositions toujours fraîches et justes.</p>
       </div>
       <div class="val reveal">
         <div class="icon">✂️</div>
-        <h4>Fait main</h4>
-        <p>Chaque bouquet est monté à la main, pièce unique pensée pour l'occasion qu'il célèbre.</p>
+        <h4 data-en="Handmade">Fait main</h4>
+        <p data-en="Every bouquet is hand-assembled, a unique piece designed for the occasion it celebrates.">Chaque bouquet est monté à la main, pièce unique pensée pour l'occasion qu'il célèbre.</p>
       </div>
       <div class="val reveal">
         <div class="icon">💐</div>
-        <h4>Sur-mesure</h4>
-        <p>Mariage, deuil, événement : nous créons selon vos envies, vos couleurs et votre budget.</p>
+        <h4 data-en="Bespoke">Sur-mesure</h4>
+        <p data-en="Wedding, tribute, event: we create according to your wishes, your colours and your budget.">Mariage, deuil, événement : nous créons selon vos envies, vos couleurs et votre budget.</p>
       </div>
     </div>
   </div>
@@ -128,7 +128,7 @@ description: La Canopée Fleurie, artisan floral en Vaucluse. Compositions pour 
 <section class="block cours" id="cours">
   <div class="wrap cours-inner reveal">
     <div class="cours-body">
-      <span class="cours-tag">Ateliers au magasin</span>
+      <span class="cours-tag" data-en="Workshops in-store">Ateliers au magasin</span>
       <h2>{{ site.cours_accroche }}</h2>
       <p>{{ site.cours_desc }}</p>
       <div class="cours-meta">
@@ -138,7 +138,7 @@ description: La Canopée Fleurie, artisan floral en Vaucluse. Compositions pour 
     </div>
     <div class="cours-visual">
       <img src="{{ site.cours_image }}" alt="{{ site.cours_titre }}" onerror="this.src='https://images.unsplash.com/photo-1470509037663-253afd7f0f51?w=800&q=80'">
-      <span class="cours-float">🌸 Tout le matériel fourni</span>
+      <span class="cours-float" data-en="🌸 All materials provided">🌸 Tout le matériel fourni</span>
     </div>
   </div>
 </section>
@@ -150,7 +150,7 @@ description: La Canopée Fleurie, artisan floral en Vaucluse. Compositions pour 
   <div class="wrap pro-inner reveal">
     <div class="pro-visual">
       <img src="{{ site.pro_image }}" alt="{{ site.pro_titre }}" onerror="this.src='https://images.unsplash.com/photo-1487070183336-b863922373d4?w=800&q=80'">
-      <span class="pro-float">🌿 Renouvelé chaque semaine</span>
+      <span class="pro-float" data-en="🌿 Refreshed every week">🌿 Renouvelé chaque semaine</span>
     </div>
     <div class="pro-body">
       <span class="pro-tag">{{ site.pro_tag }}</span>
@@ -169,8 +169,8 @@ description: La Canopée Fleurie, artisan floral en Vaucluse. Compositions pour 
 <section class="block avis" id="avis">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-eyebrow">Témoignages</span>
-      <h2>Ce que disent <em style="font-family:var(--script);font-style:normal;color:var(--vieux-rose)">nos clients</em></h2>
+      <span class="section-eyebrow" data-en="Testimonials">Témoignages</span>
+      <h2 data-en-html='What <em style="font-family:var(--script);font-style:normal;color:var(--vieux-rose)">our clients</em> say'>Ce que disent <em style="font-family:var(--script);font-style:normal;color:var(--vieux-rose)">nos clients</em></h2>
     </div>
     <div class="avis-grid">
       <div class="avis-card reveal">
@@ -192,7 +192,7 @@ description: La Canopée Fleurie, artisan floral en Vaucluse. Compositions pour 
     <div class="avis-cta reveal">
       <a class="avis-google" href="#" target="_blank" rel="noopener">
         <span class="g-badge"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
-        ★ 5,0 — Voir tous nos avis sur Google
+        <span data-en="★ 5.0 — See all our reviews on Google">★ 5,0 — Voir tous nos avis sur Google</span>
       </a>
     </div>
   </div>
@@ -202,40 +202,40 @@ description: La Canopée Fleurie, artisan floral en Vaucluse. Compositions pour 
 <section class="block contact" id="contact">
   <div class="wrap contact-inner">
     <div class="contact-info reveal">
-      <h2>Parlons de votre <em>projet floral</em></h2>
-      <p style="color:var(--vert-jardin);margin-bottom:30px">Un mariage à fleurir, un hommage à composer, ou simplement l'envie d'un beau bouquet ? Écrivez-nous.</p>
-      <div class="info-line"><div class="ic">📍</div><div><b>Adresse</b>{{ site.adresse }}</div></div>
-      <div class="info-line"><div class="ic">📞</div><div><b>Téléphone</b>{{ site.telephone }}</div></div>
-      <div class="info-line"><div class="ic">✉️</div><div><b>Email</b>{{ site.email }}</div></div>
-      <div class="info-line"><div class="ic">🕐</div><div><b>Horaires</b>{{ site.horaires }}</div></div>
+      <h2 data-en-html="Let's talk about your <em>floral project</em>">Parlons de votre <em>projet floral</em></h2>
+      <p style="color:var(--vert-jardin);margin-bottom:30px" data-en="A wedding to flower, a tribute to compose, or simply fancy a beautiful bouquet? Write to us.">Un mariage à fleurir, un hommage à composer, ou simplement l'envie d'un beau bouquet ? Écrivez-nous.</p>
+      <div class="info-line"><div class="ic">📍</div><div><b data-en="Address">Adresse</b>{{ site.adresse }}</div></div>
+      <div class="info-line"><div class="ic">📞</div><div><b data-en="Phone">Téléphone</b>{{ site.telephone }}</div></div>
+      <div class="info-line"><div class="ic">✉️</div><div><b data-en="Email">Email</b>{{ site.email }}</div></div>
+      <div class="info-line"><div class="ic">🕐</div><div><b data-en="Hours">Horaires</b>{{ site.horaires }}</div></div>
     </div>
     <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/merci/">
       <input type="hidden" name="form-name" value="contact">
       <p style="display:none"><label>Ne pas remplir : <input name="bot-field"></label></p>
       <div class="field">
-        <label for="nom">Votre nom</label>
+        <label for="nom" data-en="Your name">Votre nom</label>
         <input type="text" id="nom" name="nom" required>
       </div>
       <div class="field">
-        <label for="email">Email</label>
+        <label for="email" data-en="Email">Email</label>
         <input type="email" id="email" name="email" required>
       </div>
       <div class="field">
-        <label for="sujet">Type de demande</label>
+        <label for="sujet" data-en="Type of request">Type de demande</label>
         <select id="sujet" name="sujet">
-          <option>Bouquet du jour</option>
-          <option>Mariage</option>
-          <option>Deuil</option>
-          <option>Événement</option>
-          <option>Abonnement professionnel (restaurant, hôtel...)</option>
-          <option>Autre / sur-mesure</option>
+          <option data-en="Bouquet of the day">Bouquet du jour</option>
+          <option data-en="Wedding">Mariage</option>
+          <option data-en="Tribute">Deuil</option>
+          <option data-en="Event">Événement</option>
+          <option data-en="Business subscription (restaurant, hotel...)">Abonnement professionnel (restaurant, hôtel...)</option>
+          <option data-en="Other / bespoke">Autre / sur-mesure</option>
         </select>
       </div>
       <div class="field">
-        <label for="message">Votre message</label>
+        <label for="message" data-en="Your message">Votre message</label>
         <textarea id="message" name="message" required></textarea>
       </div>
-      <button type="submit" class="btn btn-primary" style="width:100%">Envoyer ma demande</button>
+      <button type="submit" class="btn btn-primary" style="width:100%" data-en="Send my request">Envoyer ma demande</button>
     </form>
   </div>
 </section>

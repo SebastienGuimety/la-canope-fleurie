@@ -50,6 +50,7 @@ collections:
           - { name: "horaires", label: "Horaires", widget: "string" }
           - { name: "instagram", label: "Lien Instagram", widget: "string", hint: "Adresse complète https://www.instagram.com/votrecompte" }
           - { name: "livraison", label: "Bandeau livraison (en haut du site)", widget: "string", hint: "Ex : Livraison gratuite sur Bédoin" }
+          - { name: "hero_image", label: "Photo d'accueil (grande photo en haut du site)", widget: "image" }
           - { name: "bouquet_semaine_visible", label: "Afficher l'encart Bouquet de la semaine", widget: "boolean", default: true }
           - { name: "bouquet_semaine_titre", label: "Bouquet de la semaine — Titre de l'encart", widget: "string", default: "Le bouquet de la semaine" }
           - { name: "bouquet_semaine_nom", label: "Bouquet de la semaine — Nom du bouquet", widget: "string" }

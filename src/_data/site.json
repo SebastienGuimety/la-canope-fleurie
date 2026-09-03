@@ -1,10 +1,16 @@
 {
+  "pro_visible": true,
   "cours_bouton": "Réserver un atelier",
+  "pro_titre": "Un abonnement floral pour votre établissement",
+  "pro_desc": "Fleurissez durablement votre accueil, votre salle ou votre réception. Compositions renouvelées chaque semaine ou chaque quinzaine, adaptées à votre décor et à votre budget. Formules sans engagement, pensées pour les professionnels.",
+  "pro_prix": "Sur devis, à partir de 35 €/sem",
   "bouquet_semaine_nom": "Douceur printanière",
-  "telephone": "À compléter",
+  "telephone": "06 06 06 06 06",
   "cours_desc": "Rejoignez nos ateliers d'art floral au magasin, en petit groupe et dans la bonne humeur. Débutant ou passionné, repartez avec votre propre création et de nouvelles techniques. Tout le matériel et les fleurs sont fournis.",
   "cours_prix": "À partir de 45 € / atelier",
   "cours_image": "/images/cours.jpg",
+  "pro_tag": "Restaurants · Hôtels · Commerces",
+  "pro_image": "/images/abonnement.jpg",
   "bouquet_semaine_visible": true,
   "bouquet_semaine_titre": "Le bouquet de la semaine",
   "horaires": "Mardi – Samedi · 9h – 19h",
@@ -18,13 +24,6 @@
   "bouquet_semaine_prix": "28 €",
   "email": "contact@lacanopeefleurie.fr",
   "cours_titre": "Cours d'art floral",
-  "cours_visible": true,
-  "cours_bouton": "Réserver un atelier",
-  "pro_visible": true,
-  "pro_tag": "Restaurants · Hôtels · Commerces",
-  "pro_titre": "Un abonnement floral pour votre établissement",
-  "pro_desc": "Fleurissez durablement votre accueil, votre salle ou votre réception. Compositions renouvelées chaque semaine ou chaque quinzaine, adaptées à votre décor et à votre budget. Formules sans engagement, pensées pour les professionnels.",
-  "pro_prix": "Sur devis, à partir de 35 €/sem",
-  "pro_image": "/images/abonnement.jpg",
-  "pro_bouton": "Demander un devis pro"
+  "pro_bouton": "Demander un devis pro",
+  "cours_visible": true
 }
